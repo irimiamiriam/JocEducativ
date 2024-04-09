@@ -35,8 +35,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ghicesteButton = new System.Windows.Forms.Button();
             this.sarpeButton = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.iesireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.topGhicestedataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.topSarpedataGridView)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // welcomeLabel
@@ -44,7 +47,7 @@
             this.welcomeLabel.AutoSize = true;
             this.welcomeLabel.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomeLabel.ForeColor = System.Drawing.Color.Crimson;
-            this.welcomeLabel.Location = new System.Drawing.Point(31, 36);
+            this.welcomeLabel.Location = new System.Drawing.Point(31, 60);
             this.welcomeLabel.Name = "welcomeLabel";
             this.welcomeLabel.Size = new System.Drawing.Size(234, 44);
             this.welcomeLabel.TabIndex = 2;
@@ -120,6 +123,25 @@
             this.sarpeButton.UseVisualStyleBackColor = false;
             this.sarpeButton.Click += new System.EventHandler(this.sarpeButton_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iesireToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1142, 42);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // iesireToolStripMenuItem
+            // 
+            this.iesireToolStripMenuItem.Name = "iesireToolStripMenuItem";
+            this.iesireToolStripMenuItem.Size = new System.Drawing.Size(90, 38);
+            this.iesireToolStripMenuItem.Text = "Iesire";
+            this.iesireToolStripMenuItem.Click += new System.EventHandler(this.iesireToolStripMenuItem_Click);
+            // 
             // AlegeJoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -133,11 +155,15 @@
             this.Controls.Add(this.topSarpedataGridView);
             this.Controls.Add(this.topGhicestedataGridView);
             this.Controls.Add(this.welcomeLabel);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "AlegeJoc";
             this.Text = "Alege Joc";
             this.Load += new System.EventHandler(this.AlegeJoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.topGhicestedataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.topSarpedataGridView)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,5 +178,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ghicesteButton;
         private System.Windows.Forms.Button sarpeButton;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem iesireToolStripMenuItem;
     }
 }

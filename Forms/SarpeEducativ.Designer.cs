@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.suprafataPanel = new System.Windows.Forms.Panel();
             this.punctajLabel = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
             this.stopButton = new System.Windows.Forms.Button();
+            this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // suprafataPanel
@@ -76,6 +78,11 @@
             this.stopButton.TabIndex = 3;
             this.stopButton.Text = "Stop joc";
             this.stopButton.UseVisualStyleBackColor = true;
+            this.stopButton.Click += new System.EventHandler(this.stopButton_Click);
+            // 
+            // gameTimer
+            // 
+            this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
             // SarpeEducativ
             // 
@@ -86,9 +93,11 @@
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.punctajLabel);
             this.Controls.Add(this.suprafataPanel);
+            this.KeyPreview = true;
             this.Name = "SarpeEducativ";
             this.Text = "Sarpe";
             this.Load += new System.EventHandler(this.SarpeEducativ_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SarpeEducativ_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,5 +109,6 @@
         private System.Windows.Forms.Label punctajLabel;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Button stopButton;
+        private System.Windows.Forms.Timer gameTimer;
     }
 }

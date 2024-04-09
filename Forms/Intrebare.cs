@@ -17,6 +17,7 @@ namespace JocEducativ.Forms
     {
         ItemModel item = new ItemModel();
         string raspuns;
+        public int punctaj;
         public Intrebare()
         {
             InitializeComponent();
@@ -67,8 +68,11 @@ namespace JocEducativ.Forms
                     if (rb.Text == raspuns)
                     {
                         MessageBox.Show("Felicitări, ai răspuns corect!");
+                        punctaj = item.Punctaj;
+                        this.Close();
+
                     }
-                    else MessageBox.Show(" Răspunsul tău este greșit! Răspunsul corect este "+ raspuns);
+                    else { MessageBox.Show(" Răspunsul tău este greșit! Răspunsul corect este " + raspuns); punctaj = 0; this.Close(); }
 
                 }
             }

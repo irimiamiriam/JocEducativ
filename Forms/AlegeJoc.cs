@@ -65,7 +65,15 @@ namespace JocEducativ.Forms
             SarpeEducativ sarpeEducativ = new SarpeEducativ();
             this.Hide();
             sarpeEducativ.ShowDialog();
+            int punctaj = sarpeEducativ.punctaj;
+            DatabaseHelper.RezultatUser(utilizator, punctaj, 1);
+            TopScoruri();
             this.Show();
+        }
+
+        private void iesireToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
